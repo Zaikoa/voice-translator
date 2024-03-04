@@ -13,3 +13,4 @@ https://pypi.org/project/translate/
 - output
 - some sort of voice modifyer
 - whatver else im forgetting
+- grammar check (still thinking about how i should do that since the listener makes a lot of mistakes)
