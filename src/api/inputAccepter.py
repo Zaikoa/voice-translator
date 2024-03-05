@@ -16,15 +16,17 @@ stream = mic.open(format=pyaudio.paInt16, channels=1, rate=44100, input=True, fr
 stream.start_stream()
 
 # Loops through and prints out what is said, if control-C is pressed, exit
-while True:
-    data = stream.read(4096)
 
-    # Exits when given the exit keys
-    if(keyboard.is_pressed("ctrl+c")):
-        print("Breaking out volentarily")
-        break
+def run_input_acceptor():
+    while True:
+        data = stream.read(4096)
 
-    if recognizer.AcceptWaveform(data):
-        text = recognizer.Result()
-        print(text[14:-3])
- 
+        # Exits when given the exit keys
+        if(keyboard.is_pressed("ctrl+c")):
+            print("Breaking out volentarily")
+            break
+
+        if recognizer.AcceptWaveform(data):
+            text = recognizer.Result()
+            #print(text[14:-3])
+            return text[14:-3]
