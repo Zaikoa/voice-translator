@@ -1,4 +1,4 @@
-from inputAccepter import *
+from vosk_input import *
 from translator import *
 from text_to_speech import *
 import sys
