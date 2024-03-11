@@ -19,7 +19,7 @@ stream.start_stream()
 
 def run_input_acceptor():
     while True:
-        data = stream.read(4096)
+        data = stream.read(4096, exception_on_overflow = False)
 
         # Exits when given the exit keys
         if(keyboard.is_pressed("ctrl+c")):
