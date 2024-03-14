@@ -9,7 +9,7 @@ engine.setProperty("voice", voices[2].id)
 
 # Slowing down the speech
 rate = engine.getProperty('rate')
-engine.setProperty('rate', rate-50)
+engine.setProperty('rate', rate-60)
 
 def speak_language(sentence):
     engine.say(sentence)
