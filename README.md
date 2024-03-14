@@ -1,16 +1,13 @@
 # voice-translator
 My attempt at a voice translator
 
-### What you need to do
-Clone it and download the model language you speak from
-https://alphacephei.com/vosk/models
+### How it works
+- Recorded in 5 second snippits
+- seamless model is used to capture the users voice and turn it into text
+- then there is a grammar checker that corrects mistakes that the seamless model might have made
+- then the text is processed and spoken outloud
 
-Then go inside of the translate.py and change the language you want it to become using the information here
-https://pypi.org/project/translate/
-
-
-### Needs
-- output
-- some sort of voice modifyer
-- whatver else im forgetting
-- grammar check (still thinking about how i should do that since the listener makes a lot of mistakes)
+### Notes
+- Thought that using seamless to generate the text was a good idea but it randomly prints out stuff sometimes and slows down the script
+- better text to voice is needed in the future
+- Whisper, deepL, openAI api keys would make this way better
